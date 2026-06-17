@@ -19,18 +19,18 @@ Customer churn is a critical metric in the highly competitive telecom sector. Re
 ## 🗂 Repository Structure
 
 ├── data/
-│   ├── raw/                  # Original, unaltered dataset files
-│   └── processed/            # Cleaned, encoded, and scaled data ready for modeling
-├── notebooks/
-│   ├── 01_eda_and_visualization.ipynb    # Deep dive analysis & statistical plots
-│   └── 02_model_training_evaluation.ipynb # ML experiments & pipeline engineering
-├── src/                      # Production-ready operational modular scripts
-│   ├── __init__.py
-│   ├── data_preprocessing.py # Script for loading, cleaning, and formatting data
-│   ├── feature_engineering.py# Encoding, scaling, and feature creation
-│   └── model_pipeline.py     # Model architectures, training, and metrics evaluation
-├── requirements.txt          # Python dependencies required to reproduce environments
-└── README.md                 # Project documentation and guide
+│   ├── raw/                  # Original, unaltered dataset files          
+│   └── processed/            # Cleaned, encoded, and scaled data ready for modeling                         
+├── notebooks/                        
+│   ├── 01_eda_and_visualization.ipynb    # Deep dive analysis & statistical plots                                   
+│   └── 02_model_training_evaluation.ipynb # ML experiments & pipeline engineering                   
+├── src/                      # Production-ready operational modular scripts                     
+│   ├── __init__.py                         
+│   ├── data_preprocessing.py # Script for loading, cleaning, and formatting data                     
+│   ├── feature_engineering.py# Encoding, scaling, and feature creation                  
+│   └── model_pipeline.py     # Model architectures, training, and metrics evaluation              
+├── requirements.txt          # Python dependencies required to reproduce environments              
+└── README.md                 # Project documentation and guide                                   
 
 
 
