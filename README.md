@@ -1,134 +1,345 @@
 # Telco Customer Churn Analysis & Prediction
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python\&logoColor=white)](https://www.python.org/)
+
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas\&logoColor=white)](https://pandas.pydata.org/)
+
+[![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy\&logoColor=white)](https://numpy.org/)
+
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?logo=scikitlearn\&logoColor=white)](https://scikit-learn.org/)
+
+[![SQL](https://img.shields.io/badge/SQL-Analytics-4479A1?logo=mysql\&logoColor=white)]()
+
+[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite\&logoColor=white)](https://www.sqlite.org/)
+
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi\&logoColor=black)](https://powerbi.microsoft.com/)
+
+[![Random Forest](https://img.shields.io/badge/Random%20Forest-Churn%20Prediction-228B22)]()
+
+[![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Predictive%20Analytics-red)]()
+
+[![Customer Analytics](https://img.shields.io/badge/Customer-Churn%20Analytics-blue)]()
+
+[![Data Visualization](https://img.shields.io/badge/Data%20Visualization-Matplotlib%20%26%20Seaborn-orange)]()
+
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter\&logoColor=white)](https://jupyter.org/)
+
+[![Google Colab](https://img.shields.io/badge/Google-Colab-F9AB00?logo=googlecolab\&logoColor=white)](https://colab.research.google.com/)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status](https://img.shields.io/badge/Project%20Status-In%20Progress-orange.svg)]()
 
-An end-to-end data science and machine learning pipeline focused on identifying, analyzing, and predicting customer churn for a telecommunications provider. This repository hosts exploratory workflows, data preprocessing frameworks, and predictive modeling implementations designed to optimize customer retention strategies.
+[![Project Status](https://img.shields.io/badge/Status-Completed-success.svg)]()
+
+[![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-0A66C2)]()
+
+[![Revenue Analytics](https://img.shields.io/badge/Revenue-Risk%20Analysis-purple)]()
+
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio%20Project-181717?logo=github\&logoColor=white)](https://github.com/)
+
+# Telco Customer Churn Analysis & Prediction
+
+## Overview
+
+This project delivers an end-to-end Customer Churn Analytics solution using SQL, Python, Machine Learning, and Power BI.
+
+The objective is to identify key drivers of customer churn, quantify revenue risk, predict customer attrition, and provide actionable business recommendations for customer retention.
+
+The project combines:
+
+* SQL-based business analysis
+* Exploratory Data Analysis (EDA)
+* Feature Engineering
+* Machine Learning Prediction
+* Interactive Power BI Executive Dashboard
 
 ---
 
-## 📌 Project Overview
-Customer churn is a critical metric in the highly competitive telecom sector. Retaining an existing customer is significantly more cost-effective than acquiring a new one. This project aims to:
-- Conduct thorough **Exploratory Data Analysis (EDA)** to reveal underlying churn drivers.
-- Implement robust **Data Preprocessing & Feature Engineering** to handle data anomalies, types, and class imbalance.
-- Construct and compare **Supervised & Unsupervised Machine Learning Models** to accurately forecast high-risk churn profiles and segment customer bases.
+## Business Problem
+
+Customer churn directly impacts revenue and profitability in the telecommunications industry.
+
+This project aims to answer:
+
+* Which customers are most likely to churn?
+* What factors contribute most to churn?
+* How much revenue is at risk?
+* Which customer segments should be prioritized for retention?
+* What actions can reduce churn and improve customer lifetime value?
 
 ---
 
-## 🗂 Repository Structure
+## Dataset
+
+Telco Customer Churn Dataset
+
+Dataset Size:
+
+* 7,043 customers
+* 33 business attributes
+* Demographics
+* Services subscribed
+* Billing information
+* Churn indicators
+* Customer Lifetime Value (CLTV)
+
+Key Fields:
+
+* Gender
+* Senior Citizen
+* Partner
+* Dependents
+* Tenure Months
+* Internet Service
+* Contract Type
+* Monthly Charges
+* Total Charges
+* Churn Label
+* Churn Score
+* CLTV
+
+---
+
+## Project Architecture
+
+Dataset
+↓
+SQL Analytics
+↓
+EDA & Business Insights
+↓
+Feature Engineering
+↓
+Random Forest Model
+↓
+Churn Predictions
+↓
+Power BI Executive Dashboard
+
+---
+
+## Repository Structure
+
+```text
+telco-customer-churn-analysis/
 
 ├── data/
-│   ├── raw/                  # Original, unaltered dataset files          
-│   └── processed/            # Cleaned, encoded, and scaled data ready for modeling                         
-├── notebooks/                        
-│   ├── 01_eda_and_visualization.ipynb    # Deep dive analysis & statistical plots                                   
-│   └── 02_model_training_evaluation.ipynb # ML experiments & pipeline engineering                   
-├── src/                      # Production-ready operational modular scripts                     
-│   ├── __init__.py                         
-│   ├── data_preprocessing.py # Script for loading, cleaning, and formatting data                     
-│   ├── feature_engineering.py# Encoding, scaling, and feature creation                  
-│   └── model_pipeline.py     # Model architectures, training, and metrics evaluation              
-├── requirements.txt          # Python dependencies required to reproduce environments              
-└── README.md                 # Project documentation and guide                                   
-
-
-
-
-## 📊 Dataset Profile
-
-The project utilizes the classic **Telco Customer Churn** dataset (comprising 7,043 customer records with 21 underlying features):
-
-* **Demographics:** Gender, SeniorCitizen, Partner, Dependents.
-* **Services Contracted:** PhoneService, MultipleLines, InternetService (DSL/Fiber Optic/No), OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies.
-* **Account/Billing Info:** Tenure (months), Contract type (Month-to-month/One year/Two year), PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges.
-* **Target Label:** `Churn` (Yes/No - indicating if the customer departed within the last month).
-
-
-
-## 🛠 Experimental Workflow & Pipeline
-
-### 1. Preprocessing & Feature Engineering
-
-* **Data Clean-up:** Identification and transformation of missing/whitespace strings in the `TotalCharges` column, handled via numeric coercion and imputation.
-* **Dimensionality Reduction:** Dropped irrelevant tracking identifiers (`customerID`) which carry no predictive power.
-* **Categorical Transformation:** Encoding of dichotomous and multi-class categorical features using binary mapping and One-Hot Encoding (`pd.get_dummies`).
-* **Feature Scaling:** Standardization of numeric continuous values (`tenure`, `MonthlyCharges`, `TotalCharges`) using `StandardScaler` to optimize linear model convergence and distance metrics.
-
-### 2. Predictive Modeling (Planned & In-Progress)
-
-The codebase evaluates multiple modeling methodologies to find the best balance of precision and recall:
-
-* **Supervised Classifiers:** Logistic Regression, Random Forest, and Gradient Boosting Frameworks (XGBoost/LightGBM).
-* **Unsupervised Segmentation:** K-Means Clustering on scaled demographics and usage vectors to cluster high-risk and loyal customer profiles.
-* **Class Imbalance Handling:** Application of balancing algorithms (e.g., SMOTE or adjusted class weighting) to address the minority churn class (~26%).
+│   ├── Telco_customer_churn.xlsx
+│   ├── churn_predictions.csv
+│   └── feature_importance.csv
+│
+├── notebooks/
+│   ├── 01_sql_analytics.ipynb
+│   ├── 02_eda.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   └── 04_churn_prediction.ipynb
+│
+├── powerbi/
+│   ├── Customer churn prediction.pbix
+│   └── screenshots/
+│
+├── src/
+│   └── convert_to_csv.py
+│
+├── LICENSE
+└── README.md
+```
 
 ---
 
-## 🚀 Getting Started
+## SQL Analytics
 
-### Prerequisites
+Key business questions answered:
 
-Ensure you have Python 3.8+ installed locally.
+### Contract Type Analysis
 
-### Installation & Environment Setup
+Month-to-Month customers exhibited significantly higher churn rates than annual contract customers.
 
-1. **Clone the repository:**
-``bash
-git clone [https://github.com/AxArjun/telco-customer-churn-analysis.git](https://github.com/AxArjun/telco-customer-churn-analysis.git)
-cd telco-customer-churn-analysis
+### Revenue Risk Analysis
 
-``
+Revenue exposure was quantified by customer segment and churn category.
 
+### Service Impact Analysis
 
-2. **Create and activate a virtual environment (Recommended):**
-``bash
-# On macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
+Customer retention was strongly associated with:
 
-# On Windows
-python -m venv venv
-venv\Scripts\activate
+* Online Security
+* Tech Support
+* Contract Length
 
-``
+### Customer Risk Segmentation
 
+Customers were classified into:
 
-3. **Install the required packages:**
-``bash
-pip install -r requirements.txt
+* High Risk
+* Medium Risk
+* Low Risk
 
-``
+using churn score thresholds.
 
+---
 
-## 📈 Running the Project
+## Exploratory Data Analysis
 
-* To interact with the exploratory work, execute the visual notebooks:
-``bash
-jupyter notebook notebooks/01_eda_and_visualization.ipynb
+Performed:
 
-``
+* Missing value analysis
+* Distribution analysis
+* Churn segmentation
+* Correlation analysis
+* Revenue analysis
+* Customer profile exploration
 
+Key Insights:
 
-* Modular components within the `src/` directory can be executed individually or imported into custom workflows once datasets are placed within the local paths.
-* 
+* Short tenure customers churn more frequently.
+* Month-to-Month contracts are the strongest churn driver.
+* Customers lacking Online Security and Tech Support exhibit higher churn rates.
+* Fiber Optic customers show elevated churn risk.
 
-## 🛠 Technologies & Tools Used
+---
 
-* **Core Engine:** Python
-* **Data Manipulation:** Pandas, NumPy
-* **Visualizations:** Matplotlib, Seaborn, Plotly
-* **Machine Learning Infrastructure:** Scikit-Learn, XGBoost
+## Feature Engineering
 
+Implemented:
 
+* Missing value handling
+* Data type corrections
+* Label encoding
+* One-hot encoding
+* Feature preparation for machine learning
 
-## 📝 Ongoing Commit Roadmap
+Generated outputs:
 
-As this repository is under active development, the following changes are planned for upcoming updates:
+* Model-ready dataset
+* Feature importance dataset
+* Prediction dataset
 
-* [ ] Integration of hyperparameter tuning using GridSearchCV/RandomizedSearchCV.
-* [ ] Comprehensive validation reports (Confusion Matrix, ROC-AUC curve, F1-Score analysis).
-* [ ] Adding localized scripts to export trained model pipelines via `pickle`/`joblib`.
+---
+
+## Machine Learning
+
+Model Used:
+
+* Random Forest Classifier
+
+Evaluation Metrics:
+
+| Metric    | Score |
+| --------- | ----- |
+| Accuracy  | 80.7% |
+| Precision | 64.1% |
+| Recall    | 53.5% |
+| F1 Score  | 57.7% |
+| ROC-AUC   | 84.3% |
+
+Top Predictive Features:
+
+1. Tenure Months
+2. Total Charges
+3. Monthly Charges
+4. Contract Type
+5. Online Security
+6. Tech Support
+7. Internet Service
+
+---
+
+## Power BI Dashboard
+
+The dashboard contains 7 executive-level pages:
+
+### Executive Summary & Revenue Impact
+
+* Churn KPIs
+* Revenue at Risk
+* Customer Segmentation
+
+### Churn Drivers
+
+* Contract Analysis
+* Service Analysis
+* Churn Trends
+
+### Voice of Customer
+
+* Churn Reason Analysis
+* Competitor Insights
+* Service Quality Insights
+
+### Customer Risk Intelligence
+
+* High-Risk Customer Segmentation
+* Churn Score Analysis
+
+### Executive Recommendations
+
+* Strategic Retention Recommendations
+* Revenue Protection Opportunities
+
+### AI Churn Insights
+
+* Machine Learning Results
+* Feature Importance Analysis
+
+### Retention Simulator
+
+* What-if Analysis
+* Revenue Recovery Estimation
+* Customer Retention Impact
+
+---
+
+## Business Recommendations
+
+1. Prioritize Month-to-Month customers for retention campaigns.
+2. Bundle Online Security and Tech Support services.
+3. Target low-tenure customers within their first year.
+4. Focus retention efforts on high-risk customer segments.
+5. Offer incentives for migration to annual contracts.
+
+---
+
+## Technologies Used
+
+### Analytics
+
+* SQL
+* SQLite
+
+### Programming
+
+* Python
+* Pandas
+* NumPy
+
+### Machine Learning
+
+* Scikit-Learn
+* Random Forest
+
+### Visualization
+
+* Matplotlib
+* Seaborn
+* Power BI
+
+---
+
+## Results
+
+The project demonstrates how data analytics and machine learning can be combined to:
+
+* Predict customer churn
+* Quantify revenue risk
+* Prioritize retention actions
+* Improve customer lifetime value
+* Support executive decision making
+
+---
+
+## Author
+
+Arjun Ramprasad
 
 ## 🤝 Contributing
 
@@ -137,13 +348,3 @@ Contributions, issue tracking, and feature recommendations are highly welcome. F
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-``
-
-***
-
-### 💡 Tips for Customization as you work on it:
-1. **`requirements.txt`**: Make sure you generate this file in your root folder using `pip freeze > requirements.txt` once your environment is configured.
-2. **Model Evaluation Metrics Table**: As soon as you finalize your baseline scores inside your notebook, you can add a markdown results table to the **Predictive Modeling** section to show off your model's performance (Accuracy vs. F1-Score).
-
-```
