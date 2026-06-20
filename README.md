@@ -61,6 +61,7 @@ Key Fields:
 * Churn Score
 * CLTV
 
+This dataset is available in kaggle https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 ---
 
 ## Project Architecture
