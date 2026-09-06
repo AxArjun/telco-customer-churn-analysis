@@ -311,9 +311,9 @@ Arjun Ramprasad
 Contributions, issue tracking, and feature recommendations are highly welcome. Feel free to fork this project, create a feature branch, and submit a pull request!
 
 ## 🤝 Contributors
-- ** Arjun R K** — Developer
-- **Kishore Srinivasan** — Developer
-- **R B Shanju Vikashini** — Developer
+- Arjun R K
+- **Kishore Srinivasan** 
+- **R B Shanju Vikashini** 
 
 
 ## 📄 License
